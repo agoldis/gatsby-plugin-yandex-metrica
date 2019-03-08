@@ -1,0 +1,39 @@
+{
+  "name": "gatsby-plugin-yandex-metrica",
+  "version": "0.1.0",
+  "description": "Gatsby plugin to add yandex metrica onto a site",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir . --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mellowjoey/gatsby-plugin-yandex-metrica.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "yandex metrica"
+  ],
+  "author": "Mellow Joey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mellowjoey/gatsby-plugin-yandex-metrica/issues"
+  },
+  "homepage": "https://github.com/mellowjoey/gatsby-plugin-yandex-metrica#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "babel-preset-gatsby-package": "^0.1.3",
+    "cross-env": "^5.2.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "gatsby": "^2.1.27"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.1.24"
+  }
+}

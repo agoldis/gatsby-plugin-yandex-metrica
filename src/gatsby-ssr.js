@@ -33,7 +33,7 @@ exports.onRenderBody = (
           `
         }}
       />,
-      <noscript><div><img src={`https://mc.yandex.ru/watch/${pluginOptions.trackingId}`} style={{ position: absolute, left: "-9999px" }} alt="" /></div></noscript>
+      <noscript><div><img src={`https://mc.yandex.ru/watch/${pluginOptions.trackingId}`} style={{ position: "absolute", left: "-9999px" }} alt="" /></div></noscript>
     ])
   }
 

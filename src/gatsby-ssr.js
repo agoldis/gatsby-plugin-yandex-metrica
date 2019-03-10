@@ -4,8 +4,8 @@ const knownOptions = {
   clickmap: `boolean`,
   trackLinks: `boolean`,
   accurateTrackBounce: `boolean`,
-  trackHash: `boolean`,
   webvisor: `boolean`,
+  trackHash: `boolean`,
 }
 
 exports.onRenderBody = (
@@ -24,13 +24,7 @@ exports.onRenderBody = (
       <script
         key={`gatsby-plugin-yandex-metrica`}
         dangerouslySetInnerHTML={{
-          __html: `
-            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-            ym(${pluginOptions.trackingId}, "init", ${JSON.stringify(ymCreateOptions)});
-          `
+          __html: `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(${pluginOptions.trackingId},"init",${JSON.stringify(ymCreateOptions)});`
         }}
       />,
       <noscript><div><img src={`https://mc.yandex.ru/watch/${pluginOptions.trackingId}`} style={{ position: "absolute", left: "-9999px" }} alt="" /></div></noscript>
